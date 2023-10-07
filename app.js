@@ -11,6 +11,9 @@ function applyHeading(heading) {
 
 
 
+
+
+
 function insertLink() {
     const url = prompt('Enter a URL:');
     if (url) {
@@ -48,11 +51,13 @@ function toggleView() {
 }
 
 
+
+
 $(document).ready(function () {
     var toolbarContent = `
         
-            <div id="toolbar">
-             <button onclick="execCommand('bold')"><i class="fa fa-bold"></i></button>
+       <div id="toolbar">
+        <button onclick="execCommand('bold')"><i class="fa fa-bold"></i></button>
         <button onclick="execCommand('italic')"><i class="fa fa-italic"></i></button>
         <button onclick="execCommand('underline')"><i class="fa fa-underline"></i></button>
         <button onclick="execCommand('insertUnorderedList')"><i class="fa fa-list"></i></button>
@@ -71,9 +76,11 @@ $(document).ready(function () {
         <button onclick="insertLink()"><i class="fa fa-link"></i></button> 
         <button onclick="clearEditor()">Clear</button>
         <button onclick="toggleView()"><i class="fa fa-code"></i></button>
+      <input type="file" id="imageInput" style="display: none;">
+    <button onclick="selectImage()">Upload Image</button>
+       </div>
        
-        </div>
-        <div id="editor-container">
+       <div id="editor-container">
             <div id="editor" contenteditable="true"></div>
             <div id="html-view" contenteditable="true"></div>
         </div>

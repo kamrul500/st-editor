@@ -3,7 +3,6 @@
 <head>
     <title>ST WYSIWYG Editor</title>
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style> </style>
 </head>
 <body>
@@ -12,5 +11,38 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="app.js"></script>
+
+
+<!--<script>
+    function selectImage() {
+        const input = document.getElementById('imageInput');
+        input.click(); // Trigger the file input click event
+    }
+
+    // Add an event listener to the image input element
+    document.getElementById('imageInput').addEventListener('change', handleImageUpload);
+
+    function handleImageUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const formData = new FormData();
+            formData.append('image', file);
+
+            // Send the image data to the backend
+            fetch('/upload-image', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.url) {
+                        // Insert the image URL into the editor at the cursor position
+                        document.execCommand('insertImage', false, data.url);
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+    }
+</script>-->
 </html>
 
